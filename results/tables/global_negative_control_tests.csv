@@ -1,0 +1,5 @@
+"metric","observed","null_mean","null_q025","null_q975","tail","empirical_P","BH_FDR","analysis"
+"mean_abs_effect",0.422846772749608,0.356567653156745,0.302112412627088,0.412127952950225,"higher",0.0124937531234383,0.0499750124937531,"AD common-universe matched random modules"
+"direction_consistency_rate",0.5,0.5203125,0.333333333333333,0.708333333333333,"higher",0.68015992003998,0.90687989338664,"AD common-universe matched random modules"
+"mean_cross_dataset_difference",0.663623628472112,0.541683945597672,0.434624360902569,0.646527036273412,"lower",0.988005997001499,0.988005997001499,"AD common-universe matched random modules"
+"dual_support_count",2,1.2385,0,4,"higher",0.355322338830585,0.710644677661169,"AD common-universe matched random modules"

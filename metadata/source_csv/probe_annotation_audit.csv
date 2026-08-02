@@ -1,0 +1,5 @@
+"dataset_id","platform","initial_probe_n","legacy_mapped_probe_n","strict_mapped_any_probe_n","strict_ambiguous_probe_n","strict_unmapped_probe_n","strict_retained_unambiguous_probe_n","legacy_final_gene_n","strict_IQR_final_gene_n","strict_mean_final_gene_n","strict_median_final_gene_n","ambiguity_definition"
+"MDD_GSE98793","GPL570",54675,44647,44647,1527,10028,43120,21355,20823,20823,20823,"probe maps to >1 unique official gene symbol in Bioconductor annotation"
+"AD_GSE48350","GPL570",54675,44647,44647,1527,10028,43120,21355,20823,20823,20823,"probe maps to >1 unique official gene symbol in Bioconductor annotation"
+"AD_GSE5281","GPL570",54675,44647,44647,1527,10028,43120,21355,20823,20823,20823,"probe maps to >1 unique official gene symbol in Bioconductor annotation"
+"AD_GSE33000","GPL4372",39280,21418,24087,0,15193,24087,17405,19866,19866,19866,"probe maps to >1 unique official gene symbol in Bioconductor annotation"

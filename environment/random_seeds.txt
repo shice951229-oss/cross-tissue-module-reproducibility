@@ -1,0 +1,5 @@
+20260802 | matched random-module negative control, AD | B=2000 per module
+20260802 | matched random-module negative control, MDD blood and brain | B=2000 per module and tissue
+20260802 | WGCNA modulePreservation | 500 permutations per external liver test
+GSVA/ssGSEA, mixed models, linear models, Welch tests, BH adjustment, and figure generation were deterministic for fixed inputs.
+No stochastic sample deletion, preprocessing selection, probe-mapping selection, or result-dependent model selection was used.

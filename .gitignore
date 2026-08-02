@@ -1,0 +1,24 @@
+# Third-party and locally staged data
+/data/
+/local_analysis_workspace/
+01_raw_data/
+04_intermediate/
+*.CEL
+*.CEL.gz
+*.fastq
+*.fastq.gz
+*.bam
+*.mtx
+*.mtx.gz
+*.rds
+*.RData
+*.Rhistory
+
+# Runtime outputs and caches
+/results/generated/
+renv/library/
+renv/staging/
+__pycache__/
+*.pyc
+.DS_Store
+Thumbs.db

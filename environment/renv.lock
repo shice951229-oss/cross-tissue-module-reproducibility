@@ -1,0 +1,9 @@
+{
+  "_status": "REQUIRED BEFORE PUBLIC RELEASE",
+  "_warning": "Audit placeholder only; this is not an executable dependency lock.",
+  "_required_action": "Create in a clean R 4.5.2 project with renv::snapshot(), then verify renv::restore().",
+  "R": {
+    "Version": "4.5.2"
+  },
+  "Packages": {}
+}

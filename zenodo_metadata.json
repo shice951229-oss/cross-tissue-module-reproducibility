@@ -1,0 +1,50 @@
+{
+  "title": "Cross-tissue transcriptomic module reproducibility analysis",
+  "upload_type": "software",
+  "creators": [
+    {
+      "name": "Wu, Lihua"
+    },
+    {
+      "name": "Wang, Mengyu"
+    },
+    {
+      "name": "Gao, Jing"
+    },
+    {
+      "name": "Fu, Wen"
+    },
+    {
+      "name": "Chen, Xinwang"
+    },
+    {
+      "name": "Zhao, Chi"
+    },
+    {
+      "name": "Guo, Yajing"
+    },
+    {
+      "name": "Wen, Jing"
+    },
+    {
+      "name": "Yu, Jianyu"
+    },
+    {
+      "name": "Shi, Ce"
+    }
+  ],
+  "description": "Analysis code and supporting materials for evaluating reproducibility and interpretational limits of cross-tissue transcriptomic module projections. The release contains no redistributed raw GEO expression matrices or other third-party data.",
+  "keywords": [
+    "transcriptomics",
+    "reproducibility",
+    "cross-tissue analysis",
+    "Alzheimer's disease",
+    "major depressive disorder",
+    "WGCNA",
+    "donor-aware modeling"
+  ],
+  "license": "MIT",
+  "version": "1.0.0",
+  "related_identifiers": [],
+  "notes": "The remote GitHub repository, immutable release tag, related article identifier, and Zenodo DOI must be verified before public release."
+}

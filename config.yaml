@@ -1,0 +1,43 @@
+repository:
+  name: cross-tissue-module-reproducibility
+  version: 1.0.0
+  status: "NOT READY"
+  target_github_repository: "https://github.com/shice951229-oss/cross-tissue-module-reproducibility"
+  github_repository_verified: false
+
+directories:
+  repository_root: "."
+  analysis_root: "../local_analysis_workspace"
+  raw_data_dir: "../local_analysis_workspace/01_raw_data"
+  intermediate_dir: "../local_analysis_workspace/04_intermediate"
+  results_dir: "results/generated"
+  figure_dir: "figures"
+
+geo_accessions:
+  liver: [GSE135251, GSE167523, GSE126848]
+  mdd: [GSE98793, GSE102556, GSE144136]
+  ad: [GSE48350, GSE5281, GSE33000]
+
+module_catalogue:
+  curated_programs: 8
+  wgcna_modules: 16
+  total_modules: 24
+  scoring_method: "GSVA/ssGSEA"
+  minimum_detected_genes: 3
+
+random_seeds:
+  matched_random_modules: 20260802
+  module_preservation: 20260802
+
+parameters:
+  matched_random_B: 2000
+  module_preservation_permutations: 500
+  multiple_testing: "Benjamini-Hochberg"
+  meta_analysis_secondary: "REML"
+  small_k_uncertainty: "Hartung-Knapp"
+
+public_release:
+  github_repository: null
+  zenodo_doi: null
+  release_tag: null
+  authorization_status: "REQUIRED BEFORE PUBLIC RELEASE"

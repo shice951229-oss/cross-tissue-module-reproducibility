@@ -1,0 +1,35 @@
+cff-version: 1.2.0
+message: "If you use this repository, please cite the accompanying article and the archived release when available."
+title: "Cross-tissue transcriptomic module reproducibility analysis"
+type: software
+version: "1.0.0"
+license: MIT
+authors:
+  - family-names: "Wu"
+    given-names: "Lihua"
+  - family-names: "Wang"
+    given-names: "Mengyu"
+  - family-names: "Gao"
+    given-names: "Jing"
+  - family-names: "Fu"
+    given-names: "Wen"
+  - family-names: "Chen"
+    given-names: "Xinwang"
+  - family-names: "Zhao"
+    given-names: "Chi"
+  - family-names: "Guo"
+    given-names: "Yajing"
+  - family-names: "Wen"
+    given-names: "Jing"
+  - family-names: "Yu"
+    given-names: "Jianyu"
+  - family-names: "Shi"
+    given-names: "Ce"
+keywords:
+  - transcriptomics
+  - reproducibility
+  - cross-tissue analysis
+  - Alzheimer disease
+  - major depressive disorder
+  - WGCNA
+  - donor-aware modeling

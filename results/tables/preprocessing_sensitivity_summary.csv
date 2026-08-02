@@ -1,0 +1,5 @@
+"dataset_id","mean_module_score_correlation","min_module_score_correlation","beta_correlation","median_SE_ratio_additional_over_main","significant_modules_main","significant_modules_additional_quantile","FDR_status_changes","conclusion"
+"MDD_GSE98793",1,1,1,1,5,5,0,"effect estimates broadly stable"
+"AD_GSE48350",1,1,1,1,0,0,0,"effect estimates broadly stable"
+"AD_GSE5281",1,1,1,1,12,12,0,"effect estimates broadly stable"
+"AD_GSE33000",1,1,1,1,18,18,0,"effect estimates broadly stable"
