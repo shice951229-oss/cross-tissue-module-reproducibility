@@ -1,12 +1,12 @@
 # Final repository QA
 
-Generated: 2026-08-02 (Asia/Shanghai)
+Updated: 2026-08-03 (Asia/Shanghai)
 
 ## Overall release status
 
-**NOT READY**
+**PASS WITH LIMITATIONS**
 
-The local package passed the static code, public-safety, file-integrity, metadata, and clean-project environment-restoration checks described below. Release remains blocked because no immutable `v1.0.0` release exists, no Zenodo DOI has been issued, and final public-release authorization is still required. The owner reports that the private GitHub repository was created and the initial commit was pushed; public accessibility is not claimed.
+The repository is publicly accessible at `https://github.com/shice951229-oss/cross-tissue-module-reproducibility`. The immutable `v1.0.0` release remains pinned to validated commit `3eb6474`, and Zenodo has issued version DOI `10.5281/zenodo.21762839` and concept DOI `10.5281/zenodo.21762838`. The local package passed the static code, public-safety, file-integrity, metadata, and clean-project environment-restoration checks described below. The only remaining engineering action is to push this post-release metadata synchronization commit to the default branch; the existing release tag must not be moved.
 
 ## Verification summary
 
@@ -14,7 +14,7 @@ The local package passed the static code, public-safety, file-integrity, metadat
 |---|---:|---|
 | Scientific lock | PASS | `raw_data_modified = FALSE`; 1,115/1,115 raw files unchanged; 24 modules; Tier A/B/C/D = 0/1/21/2 |
 | README and standard files | PASS | README, LICENSE, CITATION.cff, `.zenodo.json`, configuration, scripts, metadata, results, figure/table source data and environment records are present |
-| Citation and Zenodo metadata | PASS | CFF/YAML and JSON parse; author order matches the manuscript; title, version 1.0.0, authors and MIT license are synchronized; no DOI, ORCID or email is asserted |
+| Citation and Zenodo metadata | PASS | CFF/YAML and JSON parse; author order matches the manuscript; title, version 1.0.0, authors, MIT license, public repository URL and verified Zenodo version DOI are synchronized; unverified ORCID and email fields remain omitted |
 | Script headers and syntax | PASS | 20/20 scripts have the required standard header; 16/16 R scripts pass `parse()` |
 | Dependency declarations | PASS | 20 directly detected non-base R dependencies are declared; 22/22 recorded package versions match the installed validation environment |
 | Hidden manual steps | PASS | No interactive prompts, `readline`, file chooser, TODO/FIXME marker or undisclosed manual intervention was detected |
@@ -25,8 +25,8 @@ The local package passed the static code, public-safety, file-integrity, metadat
 | TIFF integrity | PASS | 6/6 figures are valid TIFF, 600 dpi and LZW-compressed |
 | DOCX/PDF integrity | PASS WITH LIMITATION | Package documents open structurally and current DOCX text/OOXML checks found no corruption or mojibake. LibreOffice/soffice was unavailable for a fresh visual rerender of the updated DOCX files, so no new clipping/layout claim is made |
 | Environment lock | PASS | 188-package lock for R 4.5.2/Bioconductor 3.22; non-no-op sandboxed clean-project restore; zero missing packages; zero version mismatches; clean `renv::status()` |
-| GitHub remote | PASS WITH LIMITATION | Local `origin` uses the owner-confirmed target and the owner reports a successful private push; automated read-only verification was interrupted by a connection reset, and public accessibility is not asserted |
-| Immutable release and Zenodo DOI | **FAIL** | No `v1.0.0` release/tag and no Zenodo DOI exist |
+| GitHub remote | PASS | Public repository verified at `https://github.com/shice951229-oss/cross-tissue-module-reproducibility` |
+| Immutable release and Zenodo DOI | PASS | `v1.0.0` points to validated commit `3eb6474`; Zenodo version DOI is `10.5281/zenodo.21762839` and concept DOI is `10.5281/zenodo.21762838` |
 
 ## Environment validation
 
@@ -50,12 +50,11 @@ The local package passed the static code, public-safety, file-integrity, metadat
 
 The manifest is authoritative for the frozen local package. No manifest-covered file may be edited after hash generation; any later metadata, dependency-lock, URL, DOI or release change requires regeneration of both the inventory and the manifest.
 
-## Release decision and required human actions
+## Release decision and remaining human action
 
-1. Push the post-validation frozen commit to the existing private repository and confirm it is visible in the GitHub web interface.
-2. Obtain final author/institutional authorization for public release and use of the MIT license.
-3. Create the immutable `v1.0.0` tag/release from the validated commit only after authorization.
-4. Archive that exact tagged release in Zenodo, obtain the real DOI, synchronize README/CFF/Zenodo/data-availability metadata, and rerun the final safety scan and hash freeze before public announcement.
+1. Push the post-release metadata synchronization commit to the public repository and confirm it is visible on the default branch.
+2. Do not move or recreate the existing `v1.0.0` tag; it must continue to identify validated commit `3eb6474`.
+3. In the Zenodo record editor, synchronize the descriptive Notes with `.zenodo.json` if the web record still displays the earlier pre-release wording. This does not change the DOI or archived files.
 
 ## Scientific lock statement
 

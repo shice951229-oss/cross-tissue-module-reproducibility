@@ -1,5 +1,7 @@
 # Cross-tissue transcriptomic module reproducibility analysis
 
+[![DOI](https://zenodo.org/badge/1320331422.svg)](https://doi.org/10.5281/zenodo.21762838)
+
 ## Overview
 
 This repository contains the analysis code and supporting materials for evaluating reproducibility and interpretational limits of cross-tissue transcriptomic module projections. It accompanies the manuscript:
@@ -8,20 +10,13 @@ This repository contains the analysis code and supporting materials for evaluati
 
 The analysis evaluates 8 predefined liver-relevant inflammatory-metabolic programs and 16 WGCNA modules derived in GSE135251 after projection into Alzheimer disease (AD) and major depressive disorder (MDD) transcriptomic datasets. The emphasis is reproducibility, dataset dependence, donor-aware uncertainty, matched random-module controls, external liver-network preservation, and conservative evidence grading. Cross-tissue association does not establish tissue origin, inter-organ transfer, mediation, or causality.
 
-Scientific results are locked. This release does not redefine modules, alter preprocessing or models, rerun analyses to improve significance, remove negative findings, or change the Tier A/B/C/D hierarchy (0/1/21/2). `raw_data_modified = FALSE`.
+Scientific results are locked. This release does not redefine modules, alter preprocessing or models, rerun analyses to improve significance, remove negative findings, or change the Tier A/B/C/D hierarchy (0/1/21/2). `raw_data_modified = FALSE`; `modules = 24`; `Tier A/B/C/D = 0/1/21/2`.
 
 ## Release status
 
-**NOT READY**
+**PUBLIC RELEASE AVAILABLE**
 
-The local package is organized, public-safe, and has a clean-room-restored dependency lock. The following items remain `REQUIRED BEFORE PUBLIC RELEASE`:
-
-1. obtain final author and institutional authorization for public release and the MIT license;
-2. create an immutable `v1.0.0` release tag only after the final frozen commit is pushed;
-3. archive that exact tagged release in Zenodo, obtain the real DOI, and synchronize the citation metadata;
-4. make the repository public only when the release and submission materials are ready.
-
-The owner reports that the private repository at `https://github.com/shice951229-oss/cross-tissue-module-reproducibility` has been created and the initial commit has been pushed. The local `origin` is configured to that URL. This README does not claim public accessibility; an automated read-only remote check during the audit was interrupted by a network connection reset. No Zenodo DOI has been issued and no formal release has been created.
+The repository is publicly accessible at `https://github.com/shice951229-oss/cross-tissue-module-reproducibility`. The `v1.0.0` GitHub release archives validated commit `3eb6474`. Zenodo archived that release under version DOI `10.5281/zenodo.21762839`; the concept DOI for all versions is `10.5281/zenodo.21762838`. Author and institutional authorization for public release under the MIT License was confirmed before publication.
 
 ## Data availability
 
@@ -111,7 +106,7 @@ The final plotted values are provided in `results/figure_source_data/figure_sour
 
 ## Citation
 
-Use `CITATION.cff`. Its DOI field remains omitted until an immutable release is archived in Zenodo and a real DOI is issued. The repository is currently private and this README does not claim public accessibility.
+Use `CITATION.cff`. Cite the archived `v1.0.0` release with DOI `10.5281/zenodo.21762839`. The stable concept DOI for all repository versions is `10.5281/zenodo.21762838`.
 
 ## License
 

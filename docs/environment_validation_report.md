@@ -49,6 +49,6 @@ This test does not establish end-to-end scientific reproducibility because GEO/H
 
 **Environment validation: PASS.**
 
-Repository release status remains **NOT READY** only because no immutable `v1.0.0` release/tag or Zenodo DOI exists and final public-release authorization is still required. The repository owner reports that the private GitHub repository was created and the initial commit was pushed; automated read-only remote verification during this audit was interrupted by a network connection reset, so no independent public-access claim is made.
+The validated environment underlies the publicly available `v1.0.0` release at commit `3eb6474`. Zenodo version DOI `10.5281/zenodo.21762839` archives that release; concept DOI `10.5281/zenodo.21762838` represents all versions. This post-validation metadata update did not rerun any scientific script.
 
 Scientific lock: `raw_data_modified = FALSE`; 1,115/1,115 raw files unchanged; module count = 24; Tier A/B/C/D = 0/1/21/2.

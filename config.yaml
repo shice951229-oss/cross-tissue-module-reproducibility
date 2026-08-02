@@ -1,9 +1,9 @@
 repository:
   name: cross-tissue-module-reproducibility
   version: 1.0.0
-  status: "NOT READY"
+  status: "PUBLIC RELEASE AVAILABLE"
   target_github_repository: "https://github.com/shice951229-oss/cross-tissue-module-reproducibility"
-  github_repository_verified: false
+  github_repository_verified: true
 
 directories:
   repository_root: "."
@@ -37,7 +37,9 @@ parameters:
   small_k_uncertainty: "Hartung-Knapp"
 
 public_release:
-  github_repository: null
-  zenodo_doi: null
-  release_tag: null
-  authorization_status: "REQUIRED BEFORE PUBLIC RELEASE"
+  github_repository: "https://github.com/shice951229-oss/cross-tissue-module-reproducibility"
+  zenodo_version_doi: "10.5281/zenodo.21762839"
+  zenodo_concept_doi: "10.5281/zenodo.21762838"
+  release_tag: "v1.0.0"
+  release_commit: "3eb6474"
+  authorization_status: "CONFIRMED"

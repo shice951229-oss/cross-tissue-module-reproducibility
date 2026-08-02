@@ -24,7 +24,7 @@ Scientific locks remain unchanged: `raw_data_modified = FALSE`; module count = 2
 | Required directories | PASS | `figures`, `metadata`, `results`, `docs`, `environment`, and all numbered script directories are present. |
 | Deterministic figure export | PASS | The TIFF conversion utility is explicit; six final figures are 600-dpi LZW TIFF files. |
 | Complete environment lock | PASS | `environment/renv.lock` records 188 packages for R 4.5.2/Bioconductor 3.22. A non-no-op sandboxed clean-project restore completed with zero missing packages and zero version mismatches; `renv::status()` reported a consistent state. |
-| Remote repository | PASS WITH LIMITATION | Local `origin` is configured to `https://github.com/shice951229-oss/cross-tissue-module-reproducibility`, and the owner reports that the private repository was created and the initial commit was pushed. A read-only automated remote check was interrupted by a network connection reset, so public accessibility is not independently asserted. |
+| Remote repository | PASS | The repository is publicly accessible at `https://github.com/shice951229-oss/cross-tissue-module-reproducibility`; GitHub shows release/tag `v1.0.0` at commit `3eb6474`, and Zenodo archived that release. |
 
 ## Direct dependency record
 
@@ -36,4 +36,4 @@ The retained scientific scripts require GEO/HPA inputs and outputs from prior nu
 
 ## Release assessment
 
-The code package is syntactically valid, public-safe, and reproducibly environment-locked. Release status remains **NOT READY** because no immutable `v1.0.0` tag/release or Zenodo DOI exists and final public-release authorization is still required. No scientific result was rerun or changed during environment validation.
+The code package is syntactically valid, public-safe, reproducibly environment-locked, publicly released, and archived. Release `v1.0.0` points to commit `3eb6474`; the version DOI is `10.5281/zenodo.21762839` and the concept DOI is `10.5281/zenodo.21762838`. No scientific result was rerun or changed during environment validation or release-metadata synchronization.
