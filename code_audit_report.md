@@ -23,8 +23,8 @@ Scientific locks remain unchanged: `raw_data_modified = FALSE`; module count = 2
 | File-size thresholds | PASS | No repository file exceeds 25 MiB; consequently none exceeds 100 MiB. |
 | Required directories | PASS | `figures`, `metadata`, `results`, `docs`, `environment`, and all numbered script directories are present. |
 | Deterministic figure export | PASS | The TIFF conversion utility is explicit; six final figures are 600-dpi LZW TIFF files. |
-| Complete environment lock | FAIL | `environment/renv.lock` parses as JSON and as a renv lockfile but contains zero packages. Its restore is a no-op and `renv::status()` reports that the temporary project is not using renv. |
-| Remote repository | UNVERIFIED | The intended URL is `https://github.com/shice951229-oss/cross-tissue-module-reproducibility`. An unauthenticated GitHub API request returned HTTP 404, which cannot distinguish a nonexistent repository from a private repository. No public-access claim is made. |
+| Complete environment lock | PASS | `environment/renv.lock` records 188 packages for R 4.5.2/Bioconductor 3.22. A non-no-op sandboxed clean-project restore completed with zero missing packages and zero version mismatches; `renv::status()` reported a consistent state. |
+| Remote repository | PASS WITH LIMITATION | Local `origin` is configured to `https://github.com/shice951229-oss/cross-tissue-module-reproducibility`, and the owner reports that the private repository was created and the initial commit was pushed. A read-only automated remote check was interrupted by a network connection reset, so public accessibility is not independently asserted. |
 
 ## Direct dependency record
 
@@ -36,4 +36,4 @@ The retained scientific scripts require GEO/HPA inputs and outputs from prior nu
 
 ## Release assessment
 
-The code package is syntactically valid and public-safe, but the environment is not reproducibly locked. Release status therefore remains **NOT READY** until a complete dependency lock is generated from the recorded environment, restored in a clean project, and verified with `renv::status()`.
+The code package is syntactically valid, public-safe, and reproducibly environment-locked. Release status remains **NOT READY** because no immutable `v1.0.0` tag/release or Zenodo DOI exists and final public-release authorization is still required. No scientific result was rerun or changed during environment validation.

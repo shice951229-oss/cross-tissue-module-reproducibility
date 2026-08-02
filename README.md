@@ -14,14 +14,14 @@ Scientific results are locked. This release does not redefine modules, alter pre
 
 **NOT READY**
 
-The local package is organized and public-safe, but the following items remain `REQUIRED BEFORE PUBLIC RELEASE`:
+The local package is organized, public-safe, and has a clean-room-restored dependency lock. The following items remain `REQUIRED BEFORE PUBLIC RELEASE`:
 
-1. create and independently verify the intended GitHub repository at `https://github.com/shice951229-oss/cross-tissue-module-reproducibility`;
-2. create an immutable release tag only after all engineering gates pass;
-3. generate a complete, executable `renv.lock` from a clean restored environment;
-4. archive the tagged release in Zenodo and insert the DOI.
+1. obtain final author and institutional authorization for public release and the MIT license;
+2. create an immutable `v1.0.0` release tag only after the final frozen commit is pushed;
+3. archive that exact tagged release in Zenodo, obtain the real DOI, and synchronize the citation metadata;
+4. make the repository public only when the release and submission materials are ready.
 
-The GitHub owner and target repository name were supplied by the project owner, but the remote URL must not be described as public or verified until it is created and independently accessible. No Zenodo DOI has been issued. No formal release has been created.
+The owner reports that the private repository at `https://github.com/shice951229-oss/cross-tissue-module-reproducibility` has been created and the initial commit has been pushed. The local `origin` is configured to that URL. This README does not claim public accessibility; an automated read-only remote check during the audit was interrupted by a network connection reset. No Zenodo DOI has been issued and no formal release has been created.
 
 ## Data availability
 
@@ -60,7 +60,7 @@ The locked analysis was run with R 4.5.2. Directly used R packages and versions 
 
 Python 3.12.13 and Pillow 12.2.0 are used only for deterministic figure-format export; the consistency audit uses the Python standard library.
 
-`environment/renv.lock` is an explicit audit placeholder, not a working dependency lock. A clean `renv::snapshot()` and `renv::restore()` test are required before release.
+`environment/renv.lock` is a complete 188-package lock for R 4.5.2 and Bioconductor 3.22. It was restored in a newly initialized isolated project with zero missing packages and zero version mismatches; `renv::status()` reported a consistent state. The validation executed no scientific script body.
 
 ## Configuration and local data staging
 
@@ -83,7 +83,7 @@ The numbered folders represent the dependency order:
 9. run the optional descriptive HPA liver-expression analysis;
 10. integrate the locked evidence matrix, generate figures/tables, and run consistency checks.
 
-The repository is not yet claimed to be one-command reproducible because raw/processed third-party matrices are excluded and a validated dependency lock is pending. Expected inputs and outputs for each retained script are documented in its header and in `code_manifest.csv`.
+The repository is not claimed to be one-command end-to-end reproducible because raw and processed third-party matrices are intentionally excluded. The dependency environment itself has passed clean-room restoration. Expected inputs and outputs for each retained script are documented in its header and in `code_manifest.csv`.
 
 ## Reproducing figures
 
@@ -111,7 +111,7 @@ The final plotted values are provided in `results/figure_source_data/figure_sour
 
 ## Citation
 
-Use `CITATION.cff`. Its repository URL and DOI fields are intentionally omitted until the remote repository and Zenodo archive are independently verified.
+Use `CITATION.cff`. Its DOI field remains omitted until an immutable release is archived in Zenodo and a real DOI is issued. The repository is currently private and this README does not claim public accessibility.
 
 ## License
 

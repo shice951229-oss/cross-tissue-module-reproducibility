@@ -46,5 +46,5 @@
   "license": "MIT",
   "version": "1.0.0",
   "related_identifiers": [],
-  "notes": "The remote GitHub repository, immutable release tag, related article identifier, and Zenodo DOI must be verified before public release."
+  "notes": "The private GitHub repository has been created and the initial commit was pushed according to the repository owner. Public accessibility, the immutable v1.0.0 release tag, any related article identifier, and the Zenodo DOI remain pending and must be verified before public release."
 }

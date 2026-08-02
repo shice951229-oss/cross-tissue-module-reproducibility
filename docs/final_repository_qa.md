@@ -6,7 +6,7 @@ Generated: 2026-08-02 (Asia/Shanghai)
 
 **NOT READY**
 
-The local package passed the static code, public-safety, file-integrity and metadata checks described below. Release remains blocked because `environment/renv.lock` contains zero package records, the target GitHub remote has not been independently verified, no immutable release exists, and no Zenodo DOI has been issued.
+The local package passed the static code, public-safety, file-integrity, metadata, and clean-project environment-restoration checks described below. Release remains blocked because no immutable `v1.0.0` release exists, no Zenodo DOI has been issued, and final public-release authorization is still required. The owner reports that the private GitHub repository was created and the initial commit was pushed; public accessibility is not claimed.
 
 ## Verification summary
 
@@ -23,9 +23,9 @@ The local package passed the static code, public-safety, file-integrity and meta
 | Large-file gate | PASS | No file exceeds 25 MiB or 100 MiB |
 | Spreadsheet integrity | PASS | 11/11 XLSX files reopen; expected sheets/ranges are present; zero formula-error hits |
 | TIFF integrity | PASS | 6/6 figures are valid TIFF, 600 dpi and LZW-compressed |
-| DOCX/PDF integrity | PASS | Package documents open structurally; the updated audit DOCX files and retained explanatory PDFs were rendered and visually inspected without clipping, overlap, broken tables or missing glyphs |
-| Environment lock | **FAIL** | `renv.lock` is valid JSON but has zero package records; `renv::restore(prompt = FALSE)` was a no-op and `renv::status()` reported that the temporary project did not appear to use renv |
-| GitHub remote | **FAIL** | Owner and intended URL are recorded, but repository creation/access and empty-remote status have not been independently verified |
+| DOCX/PDF integrity | PASS WITH LIMITATION | Package documents open structurally and current DOCX text/OOXML checks found no corruption or mojibake. LibreOffice/soffice was unavailable for a fresh visual rerender of the updated DOCX files, so no new clipping/layout claim is made |
+| Environment lock | PASS | 188-package lock for R 4.5.2/Bioconductor 3.22; non-no-op sandboxed clean-project restore; zero missing packages; zero version mismatches; clean `renv::status()` |
+| GitHub remote | PASS WITH LIMITATION | Local `origin` uses the owner-confirmed target and the owner reports a successful private push; automated read-only verification was interrupted by a connection reset, and public accessibility is not asserted |
 | Immutable release and Zenodo DOI | **FAIL** | No `v1.0.0` release/tag and no Zenodo DOI exist |
 
 ## Environment validation
@@ -34,9 +34,10 @@ The local package passed the static code, public-safety, file-integrity and meta
 - Bioconductor version: 3.22.
 - Temporary validation library: `renv` 1.2.3.
 - Lock-file parse: PASS.
-- Package records in lock file: 0.
-- Restore process exit: success, but restoration result: no-op; this is not accepted as a reproducible restore.
-- `renv::status()`: FAIL for release purposes because the temporary project was not recognized as an initialized renv project.
+- Package records in lock file: 188.
+- Restore process: PASS; non-no-op clean-project restoration completed in 395.94 seconds.
+- Missing packages: 0; version mismatches: 0.
+- `renv::status()`: PASS; `No issues found -- the project is in a consistent state.`
 - Scientific analysis scripts executed: none.
 
 ## Final file and manifest reconciliation
@@ -51,10 +52,10 @@ The manifest is authoritative for the frozen local package. No manifest-covered 
 
 ## Release decision and required human actions
 
-1. Generate a real, complete `renv.lock` from the documented R 4.5.2/Bioconductor 3.22 environment and demonstrate a non-no-op clean-room restore followed by a clean `renv::status()`.
-2. Create or independently verify the GitHub repository at the owner-supplied target, confirm the remote is empty before the first push, and push the frozen package. The intended URL is `https://github.com/shice951229-oss/cross-tissue-module-reproducibility`; this report does not claim that it is currently public or verified.
-3. Obtain final author/institutional authorization for public release and use of the MIT license.
-4. Only after all release gates pass, create the immutable `v1.0.0` tag/release, archive that release in Zenodo, obtain the real DOI, synchronize all citation and availability metadata, and rerun the final safety scan and hash freeze.
+1. Push the post-validation frozen commit to the existing private repository and confirm it is visible in the GitHub web interface.
+2. Obtain final author/institutional authorization for public release and use of the MIT license.
+3. Create the immutable `v1.0.0` tag/release from the validated commit only after authorization.
+4. Archive that exact tagged release in Zenodo, obtain the real DOI, synchronize README/CFF/Zenodo/data-availability metadata, and rerun the final safety scan and hash freeze before public announcement.
 
 ## Scientific lock statement
 
